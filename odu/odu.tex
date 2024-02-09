@@ -1,0 +1,101 @@
+\documentclass[14pt]{extarticle}
+\usepackage{extsizes}
+\usepackage{geometry}
+\geometry{margin=0.5in}
+
+%% for images
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+%% language support
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+\usepackage{amsmath}
+\usepackage{tikz}
+
+%% hyperrefs
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\title{2024}
+\author{Кбр кыш}
+\date{00.00.2024}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\part*{Введение}
+
+Дифференциальные уравнения делятся на:\\
+- ОДУ $f(x), f^{'}(x), \dots, f^{n}(x)$\\
+- УРЧП $f(x, y, z), \frac{\partial{f}}{\partial{x}}, 
+\frac{\partial{f}}{\partial{y}}, ..., \frac{\partial{f^n}}{\partial{z}}$
+
+\part{ОДУ первого порядка}
+\section{Основные понятия ОДУ}
+\begin{equation} \label{eq:1}
+    F(x, y, y^{'}, ..., y^{(n)}) = 0
+\end{equation}
+- обыкновенное дифференциальное уравнение (ОДУ). \\ $F$ - известная функция,
+\\$x$ - независимая переменная,\\$y(x)$ - искомая функция.
+\\\\
+Порядок ОДУ (\ref{eq:1}) - наивысший порядок производной неизвестной функции
+$y(x)$, входящий в уравнение.\\
+Примеры:\\
+1) $y^{'} + y^2 ln(x) = 1$ - первого порядка\\\\
+2) $xy^{(3)} + \frac{1}{x}y^4 = 0$ - третьего порядка\\
+\\
+Обозначения: 
+\begin{itemize}
+    \item $<a, b>: (a,b), [a,b], (a, b], [a, b)$ (возможны
+    $\pm \infty$ для открытого конца)
+    \item $R^{m}_{x_1, x_2, \dots, x_n}$ - вещественное евклидово 
+    пространство переменнных $x_1, x_2, \dots, x_n$
+    \item $C(D)$ - множество функций, непрерывных в области D
+    \item $C^n(D)$ - множество функций, имеющих в области D непрерывные
+    производные до $n$-го порядка включительно
+\end{itemize}
+Опр.:\\
+Пусть $D \subset R^{n+2}_{x, y, y^{'}, \dots, y^{(n)}}, \ F \in C(D)$.\\
+Частное решение ОДУ (\ref{eq:1}) - функция $y = \phi(x)$:\\
+1) $\phi(x) \in C^n(<a,b>)$\\
+2) $(x, \phi(x), \phi^{'}(x), \dots, \phi^{(n)}(x)) \in D \ \ 
+\forall x \in <a,b>$\\
+3) $ F(x, \phi(x), \phi^{'}(x), \dots, \phi^{(n)}(x)) \equiv 0 \ \ 
+\forall x \in <a, b> $\\
+\\
+Пример: $y^{''} + y = 0$\\
+Решения:\\
+$1) \ y = sinx \ 2) \ y = 2cosx \ 3) \ y = c_1 sinx \ 4) \ y = c_2 cosx \
+5) \ y = c_1 sinx + c_2 cosx \ \ \forall c_1, c_2$  \\
+ОДУ может иметь бесконечно много решений.\\
+Зам.: решение ОДУ не обязательно должно быть записано в явной форме;
+оно может быть записано в неявной форме $\phi(x, y) = 0$ или в 
+параметрической форме 
+\begin{equation*}
+\begin{cases}
+x = x(t)\\
+y = y(t)
+\end{cases}
+\end{equation*}
+Пример:\\ 
+$2xdx + 2ydy = 0$\\
+$d(x^2) + d(y^2) = 0$\\
+$d(x^2 + y^2) = 0$\\
+$x^2 + y^2 = c$ - неявная форма,\\
+\begin{equation*}
+    \begin{cases}
+        x = \sqrt{c} \ cost\\
+        y = \sqrt{c} \ sint  
+    \end{cases} 
+\end{equation*} - параметрическая форма
+\end{document}
